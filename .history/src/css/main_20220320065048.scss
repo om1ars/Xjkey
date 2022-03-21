@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./flip-card.scss";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+
+@layer base {
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+/* styling Swiper default navigations elements */
+.swiper-button-next {
+  background-color: theme("colors.white");
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  box-shadow: theme("boxShadow.lg");
+  transition: all;
+  transition-duration: 150ms;
+}
+
+html.dark .swiper-button-next {
+  background-color: theme("colors.mainBg");
+}
+
+.swiper-button-next:hover {
+  background-color: theme("colors.mainBg");
+}
+
+html.dark .swiper-button-next:hover {
+  background-color: theme("colors.mainBg");
+}
+
+.swiper-button-next::after {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+html.dark .swiper-button-next::after {
+  color: theme("colors.white");
+}
+
+.swiper-button-prev {
+  background-color: theme("colors.white");
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  box-shadow: theme("boxShadow.lg");
+  transition: all;
+  transition-duration: 150ms;
+}
+
+html.dark .swiper-button-prev {
+  background-color: theme("colors.mainBg");
+}
+
+.swiper-button-prev:hover {
+  background-color: theme("colors.mainBg");
+}
+
+html.dark .swiper-button-prev:hover {
+  background-color: theme("colors.mainBg");
+}
+
+.swiper-button-prev::after {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+html.dark .swiper-button-prev::after {
+  color: theme("colors.white");
+}
+
+html.dark .swiper-scrollbar {
+  background: rgb(255, 255, 255, 0.2);
+}
+html.dark .swiper-scrollbar-drag {
+  background: rgb(255, 255, 255, 0.6);
+}
+/* end of styling Swiper default navigations elements */
+
+.front_main_drop:hover .front_sub_drop {
+  display: block;
+}
+.back_main_drop:hover .back_sub_drop {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #626ee3;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #535DC5;
+}
